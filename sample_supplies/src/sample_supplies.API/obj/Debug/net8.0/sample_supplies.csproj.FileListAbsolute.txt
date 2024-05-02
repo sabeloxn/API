@@ -1,0 +1,8 @@
+/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.API/obj/Debug/net8.0/sample_supplies.csproj.AssemblyReference.cache
+/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.API/obj/Debug/net8.0/sample_supplies.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.API/obj/Debug/net8.0/sample_supplies.AssemblyInfoInputs.cache
+/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.API/obj/Debug/net8.0/sample_supplies.AssemblyInfo.cs
+/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.API/obj/Debug/net8.0/sample_supplies.csproj.CoreCompileInputs.cache
+/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.API/obj/Debug/net8.0/sample_supplies.MvcApplicationPartsAssemblyInfo.cs
+/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.API/obj/Debug/net8.0/sample_supplies.MvcApplicationPartsAssemblyInfo.cache
+/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.API/obj/Debug/net8.0/sample_supplies.sourcelink.json

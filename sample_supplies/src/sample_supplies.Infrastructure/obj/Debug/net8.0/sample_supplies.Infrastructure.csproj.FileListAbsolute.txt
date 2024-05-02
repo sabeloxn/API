@@ -1,0 +1,16 @@
+/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.Infrastructure/obj/Debug/net8.0/sample_supplies.Infrastructure.csproj.AssemblyReference.cache
+/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.Infrastructure/obj/Debug/net8.0/sample_supplies.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.Infrastructure/obj/Debug/net8.0/sample_supplies.Infrastructure.AssemblyInfoInputs.cache
+/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.Infrastructure/obj/Debug/net8.0/sample_supplies.Infrastructure.AssemblyInfo.cs
+/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.Infrastructure/obj/Debug/net8.0/sample_supplies.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.Infrastructure/obj/Debug/net8.0/sample_supplies.Infrastructure.sourcelink.json
+/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.Infrastructure/bin/Debug/net8.0/sample_supplies.Infrastructure.deps.json
+/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.Infrastructure/bin/Debug/net8.0/sample_supplies.Infrastructure.dll
+/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.Infrastructure/bin/Debug/net8.0/sample_supplies.Infrastructure.pdb
+/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.Infrastructure/bin/Debug/net8.0/sample_supplies.Core.dll
+/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.Infrastructure/bin/Debug/net8.0/sample_supplies.Core.pdb
+/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.Infrastructure/obj/Debug/net8.0/sample_s.2289D234.Up2Date
+/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.Infrastructure/obj/Debug/net8.0/sample_supplies.Infrastructure.dll
+/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.Infrastructure/obj/Debug/net8.0/refint/sample_supplies.Infrastructure.dll
+/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.Infrastructure/obj/Debug/net8.0/sample_supplies.Infrastructure.pdb
+/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.Infrastructure/obj/Debug/net8.0/ref/sample_supplies.Infrastructure.dll
