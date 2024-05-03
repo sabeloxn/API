@@ -7,39 +7,41 @@ namespace sample_supplies.Core.Entities
     public class sales : BaseEntity
     {
         [BsonIgnoreIfNull]
+        public DateTime? saleDate {get; set;}
+        [BsonIgnoreIfNull]
         public items[] items {get; set;}
         [BsonIgnoreIfNull]
-        public string storeLocation {get; set;}
+        public string? storeLocation {get; set;}
         [BsonIgnoreIfNull]
         public customer[] customer {get; set;}
         [BsonIgnoreIfNull]
-        public bool couponUsed {get; set;}
+        public bool? couponUsed {get; set;}
         [BsonIgnoreIfNull]
-        public string purchaseMethod {get; set;}
+        public string? purchaseMethod {get; set;}
     }
 
     public class items : BaseEntity
     {
         [BsonIgnoreIfNull]
-        public string name {get; set;}
+        public string? name {get; set;}
         [BsonIgnoreIfNull]
         public string[] tags {get; set;}
         [BsonIgnoreIfNull]
-        public decimal price {get; set;}
+        public decimal? price {get; set;}
         [BsonIgnoreIfNull]
-        public int quantity {get; set;}
+        public int? quantity {get; set;}
     }
 
     public class customer : BaseEntity
     {
         [BsonIgnoreIfNull]
-        public string gender {get; set;}
+        public string? gender {get; set;}
         [BsonIgnoreIfNull]
-        public int age {get; set;}
+        public int? age {get; set;}
         [BsonIgnoreIfNull]
-        public string email {get; set;}
+        public string? email {get; set;}
         [BsonIgnoreIfNull]
-        public int satisfaction {get; set;}
+        public int? satisfaction {get; set;}
     }
     
 }

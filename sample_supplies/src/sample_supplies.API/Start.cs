@@ -41,8 +41,8 @@ namespace sample_supplies.API
                 .AddQueryType(d => d.Name("Query"))
                     .AddTypeExtension<SaleQuery>()
 
-                .AddMutationType(d => d.Name("Mutation"))
-                    .AddTypeExtension<SaleMutation>()
+                // .AddMutationType(d => d.Name("Mutation"))
+                //     .AddTypeExtension<SaleMutation>()
 
                 .AddSubscriptionType(d => d.Name("Subscription"))
                     .AddTypeExtension<SaleSubscriptions>()

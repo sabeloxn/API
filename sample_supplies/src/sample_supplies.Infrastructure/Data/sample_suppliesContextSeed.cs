@@ -12,8 +12,27 @@ namespace sample_supplies.Infrastructure.Data
     {
         public static void SeedData(IMongoDatabase database)
         {
-
+            InsertSales(database.GetCollection<sales>(nameof(sales)));
         }
-   
+
+        private static void InsertSales(IMongoCollection<sales> salesCollection)
+        {
+            //salesCollection.DeleteMany(_ => true);
+            salesCollection.InsertMany(
+                new List<sales>
+                {
+                    new sales 
+                    { 
+                        saleDate = DateTime.Now,
+                        items = new  items[]
+                        {
+                            new items
+                            {
+                                name = "printer paper",
+                            }
+                        }
+                    }
+                });
+        }
     }
 }
