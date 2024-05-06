@@ -13,7 +13,7 @@ namespace sample_supplies.Core.Entities
         [BsonIgnoreIfNull]
         public string? storeLocation {get; set;}
         [BsonIgnoreIfNull]
-        public customer[] customer {get; set;}
+        public customer customer {get; set;}
         [BsonIgnoreIfNull]
         public bool? couponUsed {get; set;}
         [BsonIgnoreIfNull]

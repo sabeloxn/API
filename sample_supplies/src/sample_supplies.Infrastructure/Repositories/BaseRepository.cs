@@ -22,9 +22,13 @@ namespace sample_supplies.Infrastructure.Repositories
             this.collection = sample_suppliesContext.GetCollection<T>(typeof(T).Name);
         }
 
-        public async Task<IEnumerable<T>> GetAllAsync()
+        public async Task<IEnumerable<T>> GetAllAsync(int limit)
         {
-            return await this.collection.Find(_ => true).ToListAsync();
+            var filter = Builders<T>.Filter.Empty;
+            FindOptions<T, T> findOptions = new FindOptions<T, T>() {Limit = limit };
+            var res = await (await this.collection.FindAsync(filter, findOptions)).ToListAsync();
+            
+            return res;
         }
 
         public async Task<T> GetByIdAsync(string id)

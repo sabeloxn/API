@@ -10,8 +10,8 @@
     [ExtendObjectType(Name = "Query")]
     public class SaleQuery
     {
-        public Task<IEnumerable<sales>> GetSalesAsync([Service] ISaleRepository saleRepository) =>
-            saleRepository.GetAllAsync();
+        public Task<IEnumerable<sales>> GetSalesAsync(int limit,[Service] ISaleRepository saleRepository) =>
+            saleRepository.GetAllAsync(limit);
 
         public Task<sales> GetSaleAsync(string id, [Service] ISaleRepository saleRepository) =>
             saleRepository.GetByIdAsync(id);
