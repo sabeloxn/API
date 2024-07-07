@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.API/sample_supplies.csproj": {}
+    "/Volumes/T7/API/sample_supplies/src/sample_supplies.API/sample_supplies.csproj": {}
   },
   "projects": {
-    "/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.API/sample_supplies.csproj": {
+    "/Volumes/T7/API/sample_supplies/src/sample_supplies.API/sample_supplies.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.API/sample_supplies.csproj",
+        "projectUniqueName": "/Volumes/T7/API/sample_supplies/src/sample_supplies.API/sample_supplies.csproj",
         "projectName": "sample_supplies",
-        "projectPath": "/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.API/sample_supplies.csproj",
+        "projectPath": "/Volumes/T7/API/sample_supplies/src/sample_supplies.API/sample_supplies.csproj",
         "packagesPath": "/Users/tusabeoeste/.nuget/packages/",
-        "outputPath": "/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.API/obj/",
+        "outputPath": "/Volumes/T7/API/sample_supplies/src/sample_supplies.API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/tusabeoeste/.nuget/NuGet/NuGet.Config"
@@ -27,8 +27,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.Infrastructure/sample_supplies.Infrastructure.csproj": {
-                "projectPath": "/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.Infrastructure/sample_supplies.Infrastructure.csproj"
+              "/Volumes/T7/API/sample_supplies/src/sample_supplies.Infrastructure/sample_supplies.Infrastructure.csproj": {
+                "projectPath": "/Volumes/T7/API/sample_supplies/src/sample_supplies.Infrastructure/sample_supplies.Infrastructure.csproj"
               }
             }
           }
@@ -92,14 +92,14 @@
         }
       }
     },
-    "/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.Core/sample_supplies.Core.csproj": {
+    "/Volumes/T7/API/sample_supplies/src/sample_supplies.Core/sample_supplies.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.Core/sample_supplies.Core.csproj",
+        "projectUniqueName": "/Volumes/T7/API/sample_supplies/src/sample_supplies.Core/sample_supplies.Core.csproj",
         "projectName": "sample_supplies.Core",
-        "projectPath": "/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.Core/sample_supplies.Core.csproj",
+        "projectPath": "/Volumes/T7/API/sample_supplies/src/sample_supplies.Core/sample_supplies.Core.csproj",
         "packagesPath": "/Users/tusabeoeste/.nuget/packages/",
-        "outputPath": "/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.Core/obj/",
+        "outputPath": "/Volumes/T7/API/sample_supplies/src/sample_supplies.Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/tusabeoeste/.nuget/NuGet/NuGet.Config"
@@ -157,14 +157,14 @@
         }
       }
     },
-    "/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.Infrastructure/sample_supplies.Infrastructure.csproj": {
+    "/Volumes/T7/API/sample_supplies/src/sample_supplies.Infrastructure/sample_supplies.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.Infrastructure/sample_supplies.Infrastructure.csproj",
+        "projectUniqueName": "/Volumes/T7/API/sample_supplies/src/sample_supplies.Infrastructure/sample_supplies.Infrastructure.csproj",
         "projectName": "sample_supplies.Infrastructure",
-        "projectPath": "/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.Infrastructure/sample_supplies.Infrastructure.csproj",
+        "projectPath": "/Volumes/T7/API/sample_supplies/src/sample_supplies.Infrastructure/sample_supplies.Infrastructure.csproj",
         "packagesPath": "/Users/tusabeoeste/.nuget/packages/",
-        "outputPath": "/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.Infrastructure/obj/",
+        "outputPath": "/Volumes/T7/API/sample_supplies/src/sample_supplies.Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/tusabeoeste/.nuget/NuGet/NuGet.Config"
@@ -180,8 +180,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.Core/sample_supplies.Core.csproj": {
-                "projectPath": "/Users/tusabeoeste/Developer/Github/API/sample_supplies/src/sample_supplies.Core/sample_supplies.Core.csproj"
+              "/Volumes/T7/API/sample_supplies/src/sample_supplies.Core/sample_supplies.Core.csproj": {
+                "projectPath": "/Volumes/T7/API/sample_supplies/src/sample_supplies.Core/sample_supplies.Core.csproj"
               }
             }
           }
