@@ -7,9 +7,12 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.2"/>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
-    <PackageReference Include="HotChocolate" Version="14.0.0-p.93"/>
-    <PackageReference Include="HotChocolate.AspNetCore" Version="14.0.0-p.93"/>
+    <PackageReference Include="HotChocolate" Version="14.0.0-p.98"/>
+    <PackageReference Include="HotChocolate.AspNetCore" Version="14.0.0-p.98"/>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.20.1"/>
+    <PackageReference Include="HotChocolate.AspNetCore.Authorization" Version="14.0.0-p.98"/>
+    <PackageReference Include="HotChocolate.Data.MongoDb" Version="14.0.0-p.98"/>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.4"/>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\sample_supplies.Infrastructure\sample_supplies.Infrastructure.csproj"/>
