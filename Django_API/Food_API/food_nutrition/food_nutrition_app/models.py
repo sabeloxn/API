@@ -1,19 +1,10 @@
 from django.db import models
 
-# blog/models.py
-
-class Author(models.Model):
-    name = models.CharField(max_length=100)
+class Food(models.Model):
+    fdcId = models.CharField(max_length=100)
+    desc = models.CharField(max_length=100)
+    brandName = models.CharField(max_length=100)
     # ... other fields
 
     def __str__(self):
-        return self.name
-
-class Post(models.Model):
-    title = models.CharField(max_length=100)
-    content = models.TextField()
-    author = models.ForeignKey(Author, on_delete=models.CASCADE)
-    # ... other fields
-
-    def __str__(self):
-        return self.title
+        return self.fdcId

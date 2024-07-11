@@ -52,7 +52,9 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
-
+GRAPHENE = {
+    "SCHEMA": "food_nutrition.schema.schema",
+}
 ROOT_URLCONF = "food_nutrition.urls"
 
 TEMPLATES = [

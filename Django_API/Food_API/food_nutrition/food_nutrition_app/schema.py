@@ -1,130 +1,20 @@
 # blog/schema.py
-
 import graphene
+import requests 
 from graphene_django import DjangoObjectType
 
-from .models import Author, Post
+from .models import Food
 
-
-class PostType(DjangoObjectType):
+class FoodType(DjangoObjectType):
     class Meta:
-        model = Post
+        model = Food
         fields = "__all__"
-
-
-class AuthorType(DjangoObjectType):
-    class Meta:
-        model = Author
-        fields = "__all__"
-
-
-class CreatePost(graphene.Mutation):
-    class Arguments:
-        title = graphene.String(required=True)
-        content = graphene.String(required=True)
-        author_id = graphene.ID(required=True)
-
-    post = graphene.Field(PostType)
-
-    def mutate(self, info, title, content, author_id):
-        """
-        The mutate function is the function that will be called when a client
-        makes a request to this mutation. It takes in four arguments:
-        self, info, title and content. The first two are required by all mutations;
-        the last two are the arguments we defined in our CreatePostInput class.
-
-        :param self: Access the object's attributes and methods
-        :param info: Access the context of the request
-        :param title: Create a new post with the title provided
-        :param content: Pass the content of the post
-        :param author_id: Get the author object from the database
-        :return: A createpost object
-        """
-        author = Author.objects.get(pk=author_id)
-        post = Post(title=title, content=content, author=author)
-        post.save()
-        return CreatePost(post=post)
-
-
-class UpdatePost(graphene.Mutation):
-    class Arguments:
-        id = graphene.ID(required=True)
-        title = graphene.String()
-        content = graphene.String()
-
-    post = graphene.Field(PostType)
-
-    def mutate(self, info, id, title=None, content=None):
-        """
-        The mutate function is the function that will be called when a client
-        calls this mutation. It takes in four arguments: self, info, id and title.
-        The first two are required by all mutations and the last two are specific to this mutation.
-        The self argument refers to the class itself (UpdatePost) while info contains information about
-        the query context such as authentication credentials or access control lists.
-
-        :param self: Pass the instance of the class
-        :param info: Access the context of the request
-        :param id: Find the post we want to update
-        :param title: Update the title of a post
-        :param content: Update the content of a post
-        :return: An instance of the updatepost class, which is a subclass of mutation
-        """
-        try:
-            post = Post.objects.get(pk=id)
-        except Post.DoesNotExist:
-            raise Exception("Post not found")
-
-        if title is not None:
-            post.title = title
-        if content is not None:
-            post.content = content
-
-        post.save()
-        return UpdatePost(post=post)
-
-
-class DeletePost(graphene.Mutation):
-    class Arguments:
-        id = graphene.ID(required=True)
-
-    success = graphene.Boolean()
-
-    def mutate(self, info, id):
-        """
-        The mutate function is the function that will be called when a client
-        calls this mutation. It takes in four arguments: self, info, id. The first
-        argument is the object itself (the class instance). The second argument is
-        information about the query context and user making this request. We don't
-        need to use it here so we'll just pass it along as-is to our model method.
-        The third argument is an ID of a post we want to delete.
-
-        :param self: Represent the instance of the class
-        :param info: Access the context of the query
-        :param id: Find the post that is to be deleted
-        :return: A deletepost object, which is the return type of the mutation
-        """
-        try:
-            post = Post.objects.get(pk=id)
-        except Post.DoesNotExist:
-            raise Exception("Post not found")
-
-        post.delete()
-        return DeletePost(success=True)
-
 
 class Query(graphene.ObjectType):
-    posts = graphene.List(PostType)
-    authors = graphene.List(AuthorType)
+    food_list = graphene.List(FoodType)
 
     def resolve_posts(self, info):
-        """
-        The resolve_posts function is a resolver. It’s responsible for retrieving the posts from the database and returning them to GraphQL.
-
-        :param self: Refer to the current instance of a class
-        :param info: Pass along the context of the query
-        :return: All post objects from the database
-        """
-        return Post.objects.all()
+        return Food.objects.all()
 
     def resolve_authors(self, info):
         """
@@ -134,13 +24,70 @@ class Query(graphene.ObjectType):
         :param info: Pass information about the query to the resolver
         :return: A list of all the authors in the database
         """
-        return Author.objects.all()
+        return Food.objects.all()
+    
+class SearchFood(graphene.Mutation):
+    class Arguments:
+        search_string = graphene.String(required=True)
+    food = graphene.Field(FoodType)
 
+    def mutate(self, info, search_string):
+        food_name="oatmeal"#unused
+        url = f"https://api.nal.usda.gov/fdc/v1/foods/search?query={search_string}"
+
+        headers = {'X-Api-Key': 'uPepNCcg14kQ99wysRCNRiRxL5BX9tarAosGsmu9'}
+        r = requests.get(url, headers=headers)
+
+        response = requests.get(url,headers=headers) 
+        # print response 
+        print(response) 
+        print()
+
+        #//---------------------------------------------------------------------------------+
+        #//Convert Request Response to Dictionary                                           +
+        #//---------------------------------------------------------------------------------+
+
+        # Store JSON data in API_Data 
+        API_Data = response.json() 
+        #print(API_Data["description"]) #one food
+
+        #label_nutrients_data = API_Data["labelNutrients"]#one food
+
+        res = 0
+        for i in (API_Data):
+            food_name = API_Data["foods"][res]["description"]
+            #Some fields don't have "brandName", it is captured in dataType
+            datatype = API_Data["foods"][res]["dataType"]
+            if datatype == "Branded":
+                food_brand_name = API_Data["foods"][res]["brandName"]
+
+            food_fdcid = API_Data["foods"][res]["fdcId"]
+            #Some fields don't have "servingSize", have to check for key. Also if there is no serving size , there is no serving size unit.
+            if "servingSize" in API_Data["foods"][res]:
+                serving_size = API_Data["foods"][res]["servingSize"]
+                serving_size_unit = API_Data["foods"][res]["servingSizeUnit"]
+
+            if "ingredients" in API_Data["foods"][res]:
+                food_ingredients = API_Data["foods"][res]["ingredients"]
+            print()
+            print("fdcId: %s Desc: %s Brand Name: %s Serving Size: %s%s \n" %(food_fdcid, food_name,food_brand_name, serving_size,serving_size_unit))
+            
+            for j in range (len(API_Data["foods"][res]["foodNutrients"])):
+                label_nutrients = API_Data["foods"][res]["foodNutrients"]#["nutrientName"]
+                label_nutrient_name = label_nutrients[j]["nutrientName"]
+                label_nutrient_value = label_nutrients[j]["value"]
+                label_nutrient_unit_name = label_nutrients[j]["unitName"]
+
+                print(label_nutrient_name,": ", label_nutrient_value,label_nutrient_unit_name) #,"\n"
+                #print(label_nutrient_name)
+            print("\nINGRIDIENTS: ",food_ingredients )
+            #print("fdcId: %s Name: %s Serving Size: %s \n" %(food_fdcid, food_name, serving_size))
+            #print(label_nutrients)
+            #print(label_nutrient_name)
+            res+=1
 
 class Mutation(graphene.ObjectType):
-    create_post = CreatePost.Field()
-    update_post = UpdatePost.Field()
-    delete_post = DeletePost.Field()
+    create_post = SearchFood.Field()
 
 
 schema = graphene.Schema(query=Query, mutation=Mutation)
