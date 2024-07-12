@@ -10,6 +10,6 @@ const planetSchema = new Schema ({
             mean: Number
         },
         mainAtmosphere: [String],
-        _id: String
+        id: String
 });
 module. exports = model( 'planet', planetSchema);
